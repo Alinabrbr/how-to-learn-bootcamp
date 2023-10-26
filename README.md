@@ -1,6 +1,5 @@
 # how-to-learn-bootcamp
 # Проект "Научиться учиться" (bootcamp)
-— — —
 
 Технологии проекта: HTML5, CSS3.  
 
