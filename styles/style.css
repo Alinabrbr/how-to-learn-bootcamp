@@ -1,3 +1,12 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -21,6 +30,7 @@
   flex-direction: column;
   justify-content: center;
   z-index: 1;
+  overflow: hidden;
 }
 
 .logo {
@@ -60,6 +70,10 @@
   color: #2f80ed;
 }
 
+.header__square-pic_rotation, .kaufman__triangle_rotation {
+  animation: rotation linear infinite 20s;
+}
+
 .header__main-illustration {
   width: 765px;
   height: 608px;
@@ -82,13 +96,11 @@
 }
 
 .description {
-  display: flex;
-  justify-content: center;
 }
 
 .two-columns {
   width: 80%;
-  margin: 100px 0;
+  margin: 100px auto 0;
   display: flex;
   justify-content: space-between;
 }
@@ -124,10 +136,14 @@
   line-height: 34px;
 }
 
+.oakley_theme_dark {
+  background-color: #f2f2f2;
+}
+
 .section-title {
   text-align: center;
   width: 60%;
-  margin: 0 auto 20px;
+  margin: 100px auto 20px;
   font-size: 60px;
   font-weight: 600;
   line-height: 1.15;
@@ -142,12 +158,72 @@
   line-height: 34px;
 }
 
+.cards {
+  max-width: 920px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 100px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.cards__item {
+  width: 200px;
+  list-style-type: none;
+  align-items: center;
+  text-align: center;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 60px 0 43px;
+}
+
+.cards__title {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.cards__description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.video__iframes {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 20px;
+  position: relative;
+}
+
+.video__iframe {
+  border: 0;
+  position: relative;
+  bottom: -50px;
+  left: 0;
+  z-index: 1;
+}
+
+.two-columns_type_section-mix {
+  margin: 0 auto;
+  padding-top: 160px;
+}
+
 .table {
   max-width: 1100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0 auto 100px;
+  padding: 0;
 }
 
 .table__cell {
@@ -172,6 +248,72 @@
   line-height: 1.2;
 }
 
+.khan {
+  background-color: #f2f2f2;
+}
+
+.khan__container {
+  width: 80%;
+  padding-top: 105px;
+  margin: 0 auto;
+}
+
+.khan__author {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 42px;
+}
+
+.khan__title {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.khan__quote {
+  max-width: 790px;
+  margin: 50px 0 36px 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+.khan__quote-author {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.khan__quote-author-subline {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.khan__book-container {
+  padding: 68px 0 0 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+  margin: 0 48px 0 0;
+}
+
+.khan__buy-link {
+  color: #2f80ed;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 42px;
+  text-decoration: none;
+}
+
 .feynman {
   min-height: 890px;
   background-color: #f2f2f2;
@@ -183,7 +325,7 @@
 
 .feynman__title {
   width: 648px;
-  margin: 100px auto 0;
+  margin: 0 auto;
   padding-top: 100px;
   text-align: center;
   font-size: 120px;
@@ -263,6 +405,20 @@
   height: 877px;
 }
 
+.resources__logo-zone {
+  max-width: 1100px;
+  margin: 80px auto 217px;
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
+}
+
+.resources__link:-webkit-any-link {
+  text-decoration: none;
+}
+
 .footer {
   background-color: #1f1f1f;
   color: white;
@@ -335,4 +491,12 @@
 /* свойство из браузера, для обнуления лишних стилей*/
 .footer__column-link:-webkit-any-link {
   text-decoration: none;
+}
+
+.link {
+  transition: opacity 0.2s linear;
+}
+
+.link:hover {
+  opacity: 0.6;
 }
