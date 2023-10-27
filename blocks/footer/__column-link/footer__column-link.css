@@ -1,0 +1,8 @@
+.footer__column-link {
+  color: white;
+}
+
+/* свойство из браузера, для обнуления лишних стилей*/
+.footer__column-link:-webkit-any-link {
+  text-decoration: none;
+}
